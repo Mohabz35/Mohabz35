@@ -1,0 +1,59 @@
+{
+  "username": "Mohabz35",
+  "name": "Mohammed Abbas",
+  "title": "Front-End Developer & Emerging Tech Innovator",
+  "bio": "Economics & Statistics @ Chuka University • ALX Software Engineer • HealthTech & FinTech Builder",
+  "location": "Kenya",
+  "status_message": "Available to Build",
+  "social_links": {
+    "website": "https://m-abbaslab.vercel.app/",
+    "github": "https://github.com/Mohabz35",
+    "linkedin": "https://linkedin.com/in/mohammedabbas"
+  },
+  "highlight_cards": [
+    {
+      "id": "card_1",
+      "tag": "HEALTHTECH",
+      "metric": "Afya Connect",
+      "unit": "platform",
+      "desc": "Telemedicine & digital healthcare solutions connecting patients & doctors.",
+      "accent": "#2ea043"
+    },
+    {
+      "id": "card_2",
+      "tag": "FINTECH",
+      "metric": "M-PESA",
+      "unit": "integration",
+      "desc": "Event registration portals powered by seamless M-PESA mobile payments.",
+      "accent": "#58a6ff"
+    },
+    {
+      "id": "card_3",
+      "tag": "FOUNDATION",
+      "metric": "Econ & Stats",
+      "unit": "Chuka Univ",
+      "desc": "Quantitative analysis, statistical modeling, and full-stack engineering.",
+      "accent": "#e3b341"
+    }
+  ],
+  "featured_repos": [
+    {
+      "name": "Afya---Connect",
+      "desc": "Health-tech platform bridging patients and doctors in Kenya.",
+      "lang": "TypeScript",
+      "color": "#3178c6"
+    },
+    {
+      "name": "tharaka_nithi_registration",
+      "desc": "Event registration system with integrated M-PESA payments.",
+      "lang": "TypeScript",
+      "color": "#3178c6"
+    },
+    {
+      "name": "Mohammed-BOT",
+      "desc": "Multi-device WhatsApp bot to automate workflows & tasks.",
+      "lang": "JavaScript",
+      "color": "#f1e05a"
+    }
+  ]
+}

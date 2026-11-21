@@ -1,0 +1,45 @@
+name: Update Profile Art
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # Runs daily at 06:00 UTC
+  workflow_dispatch:      # Allows manual trigger anytime
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-profile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch live contribution stats
+        run: python scripts/fetch_contributions.py
+
+      - name: Render animated contribution heatmap
+        run: python scripts/render_heatmap_svg.py
+
+      - name: Render live stats card
+        run: python scripts/render_stats_svg.py
+
+      - name: Render profile cards
+        run: python scripts/render_readme_cards.py
+
+      - name: Commit & push updated SVGs
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh profile stats & animated cards [skip ci]"
+          file_pattern: "data/contributions.json contrib-heatmap.svg stats.svg cards/*.svg"

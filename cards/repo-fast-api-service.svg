@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="286" height="160" viewBox="0 0 286 160"
+     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', ui-monospace, SFMono-Regular, Menlo, monospace">
+  <style>
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: none; }
+    }
+    .r {
+      opacity: 0;
+      animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+  <rect width="286" height="160" rx="12" fill="#161b22"/>
+  <rect x="0.5" y="0.5" width="285" height="159" rx="12" fill="none" stroke="#30363d"/>
+
+  <g class="r" style="animation-delay: 0.80s">
+    <!-- Folder icon / Repo Name -->
+    <text x="20" y="38" font-size="16" font-weight="600" fill="#58a6ff">fast-api-service</text>
+
+    <!-- Description -->
+    <text x="20" y="70" font-size="12" fill="#e6edf3">
+      High performance microservice templa
+    </text>
+    <text x="20" y="88" font-size="12" fill="#7d8590">
+      te with automatic docs and testing.
+    </text>
+
+    <!-- Language -->
+    <circle cx="26" cy="134" r="5" fill="#dea584"/>
+    <text x="38" y="138" font-size="12" fill="#7d8590">Rust</text>
+  </g>
+</svg>
